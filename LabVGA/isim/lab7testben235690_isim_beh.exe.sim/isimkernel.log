@@ -1,0 +1,28 @@
+Command line:
+   lab7testben235690_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49433
+
+Tue Jan 15 15:41:02 2019
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 641.094 Meg
+
+ Total Signals          : 23
+ Total Nets             : 33
+ Total Signal Drivers   : 14
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 7
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 517
+
+ Total Simulation Time: 2.04361 sec
+
+ Current Memory Usage: 955.666 Meg
+
+Tue Jan 15 15:41:34 2019
+

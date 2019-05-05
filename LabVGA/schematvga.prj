@@ -1,0 +1,3 @@
+vhdl work "VGA_Modul.vhd"
+vhdl work "pixelowymodul.vhd"
+vhdl work "schematvga.vhf"

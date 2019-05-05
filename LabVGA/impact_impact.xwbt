@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=F:\UCiSW\LabVGA\impact.xsl
+OUTFILE=F:\UCiSW\LabVGA\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=F:\UCiSW\LabVGA
+LICENSE=iMPACT
+USER_INFO=iMPACT

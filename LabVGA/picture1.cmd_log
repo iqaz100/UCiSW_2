@@ -1,0 +1,8 @@
+vhdtdtfi -lib work pixelowymodul.vhd -prj LabVGA -o picture1.spl -module picture1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e picture1.spl C:/Users/lab/Desktop/dd/ostatnie_laby/LabVGA/picture1.sym 
+vhdtdtfi -lib work pixelowymodul.vhd -prj LabVGA -o picture1.spl -module picture1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e picture1.spl F:/UCiSW/LabVGA/picture1.sym 
+vhdtdtfi -lib work pixelowymodul.vhd -prj LabVGA -o picture1.spl -module picture1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e picture1.spl F:/UCiSW_HERE/LabVGA/picture1.sym 
+vhdtdtfi -lib work pixelowymodul.vhd -prj LabVGA -o picture1.spl -module picture1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e picture1.spl F:/UCiSW_HERE/LabVGA/picture1.sym 

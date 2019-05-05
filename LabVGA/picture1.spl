@@ -1,0 +1,11 @@
+[Inputs]
+DataRdy
+CLK_50MHz
+=PIX_X[9:0]=
+=PIX_Y[9:0]=
+=B1_Status[7:0]=
+=B2_X[7:0]=
+=B3_Y[7:0]=
+[Outputs]
+=RGB[2:0]=
+[BiDir]

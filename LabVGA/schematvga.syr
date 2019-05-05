@@ -1,0 +1,508 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: schematvga.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "schematvga.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "schematvga"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : schematvga
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd" in Library work.
+Entity <picture1> compiled.
+Entity <picture1> (Architecture <behavioral>) compiled.
+Compiling vhdl file "F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd" in Library work.
+Entity <vgacontroler> compiled.
+Entity <vgacontroler> (Architecture <behavioral>) compiled.
+Compiling vhdl file "F:/UCiSW_HERE/LabVGA/schematvga.vhf" in Library work.
+Architecture behavioral of Entity schematvga is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <schematvga> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <picture1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vgaControler> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <schematvga> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "F:/UCiSW_HERE/LabVGA/schematvga.vhf" line 127: Instantiating black box module <PS2_Mouse>.
+WARNING:Xst:2211 - "F:/UCiSW_HERE/LabVGA/schematvga.vhf" line 139: Instantiating black box module <LCD1x64>.
+Entity <schematvga> analyzed. Unit <schematvga> generated.
+
+Analyzing Entity <picture1> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd" line 51: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <P_Y>, <ULY>, <P_X>, <ULX>
+Entity <picture1> analyzed. Unit <picture1> generated.
+
+Analyzing Entity <vgaControler> in library <work> (Architecture <behavioral>).
+Entity <vgaControler> analyzed. Unit <vgaControler> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <picture1>.
+    Related source file is "F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd".
+WARNING:Xst:647 - Input <B1_Status<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit adder for signal <RGB$addsub0000> created at line 61.
+    Found 32-bit adder for signal <RGB$addsub0001> created at line 62.
+    Found 32-bit comparator greater for signal <RGB$cmp_gt0000> created at line 61.
+    Found 32-bit comparator greater for signal <RGB$cmp_gt0001> created at line 62.
+    Found 32-bit comparator less for signal <RGB$cmp_lt0000> created at line 61.
+    Found 32-bit comparator less for signal <RGB$cmp_lt0001> created at line 62.
+    Found 32-bit register for signal <ULX>.
+    Found 10-bit adder for signal <ULX$add0001> created at line 44.
+    Found 32-bit register for signal <ULY>.
+    Found 10-bit subtractor for signal <ULY$sub0001> created at line 45.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <picture1> synthesized.
+
+
+Synthesizing Unit <vgaControler>.
+    Related source file is "F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd".
+    Found 32-bit up counter for signal <h_cnt>.
+    Found 32-bit comparator less for signal <h_cnt$cmp_lt0000> created at line 57.
+    Found 32-bit comparator less for signal <hor_sync$cmp_lt0000> created at line 73.
+    Found 32-bit comparator greater for signal <PIX_X$cmp_gt0000> created at line 97.
+    Found 32-bit comparator greater for signal <PIX_X$cmp_gt0001> created at line 97.
+    Found 32-bit comparator less for signal <PIX_X$cmp_lt0000> created at line 97.
+    Found 32-bit comparator less for signal <PIX_X$cmp_lt0001> created at line 97.
+    Found 32-bit up counter for signal <v_cnt>.
+    Found 32-bit comparator less for signal <v_cnt$cmp_lt0000> created at line 62.
+    Found 32-bit comparator less for signal <ver_sync$cmp_lt0000> created at line 85.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   8 Comparator(s).
+Unit <vgaControler> synthesized.
+
+
+Synthesizing Unit <schematvga>.
+    Related source file is "F:/UCiSW_HERE/LabVGA/schematvga.vhf".
+WARNING:Xst:653 - Signal <line<63:24>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
+WARNING:Xst:653 - Signal <XLXI_5_Reset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <schematvga> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Comparators                                          : 12
+ 32-bit comparator greater                             : 4
+ 32-bit comparator less                                : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <PS2_Mouse.ngc>.
+Reading core <LCD1x64.ngc>.
+Loading core <PS2_Mouse> for timing and area information for instance <XLXI_3>.
+Loading core <LCD1x64> for timing and area information for instance <XLXI_5>.
+INFO:Xst:2261 - The FF/Latch <ULX_10> in Unit <XLXI_1> is equivalent to the following 21 FFs/Latches, which will be removed : <ULX_11> <ULX_12> <ULX_13> <ULX_14> <ULX_15> <ULX_16> <ULX_17> <ULX_18> <ULX_19> <ULX_20> <ULX_21> <ULX_22> <ULX_23> <ULX_24> <ULX_25> <ULX_26> <ULX_27> <ULX_28> <ULX_29> <ULX_30> <ULX_31> 
+INFO:Xst:2261 - The FF/Latch <ULY_9> in Unit <XLXI_1> is equivalent to the following 22 FFs/Latches, which will be removed : <ULY_10> <ULY_11> <ULY_12> <ULY_13> <ULY_14> <ULY_15> <ULY_16> <ULY_17> <ULY_18> <ULY_19> <ULY_20> <ULY_21> <ULY_22> <ULY_23> <ULY_24> <ULY_25> <ULY_26> <ULY_27> <ULY_28> <ULY_29> <ULY_30> <ULY_31> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Comparators                                          : 12
+ 32-bit comparator greater                             : 4
+ 32-bit comparator less                                : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <ULX_10> in Unit <picture1> is equivalent to the following 21 FFs/Latches, which will be removed : <ULX_11> <ULX_12> <ULX_13> <ULX_14> <ULX_15> <ULX_16> <ULX_17> <ULX_18> <ULX_19> <ULX_20> <ULX_21> <ULX_22> <ULX_23> <ULX_24> <ULX_25> <ULX_26> <ULX_27> <ULX_28> <ULX_29> <ULX_30> <ULX_31> 
+INFO:Xst:2261 - The FF/Latch <ULY_9> in Unit <picture1> is equivalent to the following 22 FFs/Latches, which will be removed : <ULY_10> <ULY_11> <ULY_12> <ULY_13> <ULY_14> <ULY_15> <ULY_16> <ULY_17> <ULY_18> <ULY_19> <ULY_20> <ULY_21> <ULY_22> <ULY_23> <ULY_24> <ULY_25> <ULY_26> <ULY_27> <ULY_28> <ULY_29> <ULY_30> <ULY_31> 
+
+Optimizing unit <schematvga> ...
+
+Optimizing unit <picture1> ...
+
+Optimizing unit <vgaControler> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block schematvga, actual ratio is 6.
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_5> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_5> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_5> is equivalent to the following FF/Latch : <State_16_1> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_5> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_5> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_5> is equivalent to the following FF/Latch : <State_16_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : schematvga.ngr
+Top Level Output File Name         : schematvga
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 942
+#      GND                         : 3
+#      INV                         : 37
+#      LUT1                        : 119
+#      LUT2                        : 96
+#      LUT2_L                      : 5
+#      LUT3                        : 114
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 100
+#      LUT4_D                      : 9
+#      LUT4_L                      : 13
+#      MUXCY                       : 262
+#      MUXF5                       : 22
+#      MUXF6                       : 10
+#      MUXF7                       : 5
+#      VCC                         : 3
+#      XORCY                       : 140
+# FlipFlops/Latches                : 255
+#      FD                          : 11
+#      FDE                         : 69
+#      FDR                         : 87
+#      FDRE                        : 52
+#      FDRS                        : 14
+#      FDRSE                       : 4
+#      FDS                         : 12
+#      FDSE                        : 6
+# Shift Registers                  : 1
+#      SRL16E                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 1
+#      IOBUF                       : 6
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      280  out of   4656     6%  
+ Number of Slice Flip Flops:            255  out of   9312     2%  
+ Number of 4 input LUTs:                498  out of   9312     5%  
+    Number used as logic:               497
+    Number used as Shift registers:       1
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    232     8%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_50MHz                          | BUFGP                  | 256   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.090ns (Maximum Frequency: 164.212MHz)
+   Minimum input arrival time before clock: 2.651ns
+   Maximum output required time after clock: 14.621ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_50MHz'
+  Clock period: 6.090ns (frequency: 164.212MHz)
+  Total number of paths / destination ports: 7784 / 521
+-------------------------------------------------------------------------
+Delay:               6.090ns (Levels of Logic = 15)
+  Source:            XLXI_2/v_cnt_1 (FF)
+  Destination:       XLXI_2/v_cnt_31 (FF)
+  Source Clock:      CLK_50MHz rising
+  Destination Clock: CLK_50MHz rising
+
+  Data Path: XLXI_2/v_cnt_1 to XLXI_2/v_cnt_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             7   0.514   0.754  XLXI_2/v_cnt_1 (XLXI_2/v_cnt_1)
+     LUT2:I0->O            1   0.612   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_lut<1>2 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_lut<1>2)
+     MUXCY:S->O            1   0.404   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<1>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<1>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<2>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<2>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<3>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<3>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<4>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<4>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<5>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<5>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<6>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<6>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<7>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<7>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<8>_1 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<8>2)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<9>_0 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<9>1)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<10>_0 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<10>1)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<11>_0 (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<11>1)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<12> (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<12>)
+     MUXCY:CI->O           1   0.399   0.360  XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<13> (XLXI_2/Mcompar_ver_sync_cmp_lt0000_cy<13>)
+     LUT4:I3->O           32   0.612   1.073  XLXI_2/v_cnt_and00001 (XLXI_2/v_cnt_and0000)
+     FDRE:R                    0.795          XLXI_2/v_cnt_0
+    ----------------------------------------
+    Total                      6.090ns (3.903ns logic, 2.187ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50MHz'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              2.651ns (Levels of Logic = 2)
+  Source:            BTN_SOUTH (PAD)
+  Destination:       XLXI_3/State_FSM_FFd1 (FF)
+  Destination Clock: CLK_50MHz rising
+
+  Data Path: BTN_SOUTH to XLXI_3/State_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.106   0.750  BTN_SOUTH_IBUF (BTN_SOUTH_IBUF)
+     begin scope: 'XLXI_3'
+     FDR:R                     0.795          State_FSM_FFd1
+    ----------------------------------------
+    Total                      2.651ns (1.901ns logic, 0.750ns route)
+                                       (71.7% logic, 28.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHz'
+  Total number of paths / destination ports: 23603 / 16
+-------------------------------------------------------------------------
+Offset:              14.621ns (Levels of Logic = 30)
+  Source:            XLXI_2/h_cnt_3 (FF)
+  Destination:       VGA_B (PAD)
+  Source Clock:      CLK_50MHz rising
+
+  Data Path: XLXI_2/h_cnt_3 to VGA_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.514   0.795  XLXI_2/h_cnt_3 (XLXI_2/h_cnt_3)
+     LUT3:I0->O            1   0.612   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_lut<1> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<1> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<2> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<3> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<4> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<5> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<6> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<7> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<8> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<9> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.399   0.509  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<10> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<10>)
+     LUT4:I0->O           57   0.612   1.232  XLXI_2/PIX_X_and00001 (XLXI_2/PIX_X_and0000)
+     LUT2:I0->O            2   0.612   0.449  XLXI_2/PIX_Y<0>1 (XLXN_71<0>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_lut<0> (XLXI_1/Mcompar_RGB_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<0> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<1> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<2> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<3> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<4> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<5> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<6> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<7> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<8> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<9> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<10> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.399   0.509  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<11> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<11>)
+     LUT4:I0->O            1   0.612   0.000  XLXI_2/VGA_R_SW01 (XLXI_2/VGA_R_SW0)
+     MUXF5:I1->O           3   0.278   0.603  XLXI_2/VGA_R_SW0_f5 (N2)
+     LUT4:I0->O            1   0.612   0.357  XLXI_2/VGA_R (VGA_R_OBUF)
+     OBUF:I->O                 3.169          VGA_R_OBUF (VGA_R)
+    ----------------------------------------
+    Total                     14.621ns (10.167ns logic, 4.454ns route)
+                                       (69.5% logic, 30.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.61 secs
+ 
+--> 
+
+Total memory usage is 225940 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

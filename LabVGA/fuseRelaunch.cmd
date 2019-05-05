@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/lab/Desktop/dd/ostatnie_laby/LabVGA/lab7testben235690_isim_beh.exe" -prj "C:/Users/lab/Desktop/dd/ostatnie_laby/LabVGA/lab7testben235690_beh.prj" "work.lab7testben235690" 

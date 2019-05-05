@@ -1,0 +1,5 @@
+set -tmpdir "F:/UCiSW_HERE/LabVGA/xst/projnav.tmp"
+set -xsthdpdir "F:/UCiSW_HERE/LabVGA/xst"
+elaborate
+-ifn picture1.prj
+-ifmt mixed
