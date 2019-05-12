@@ -8,21 +8,21 @@ FL C:/Users/lab/Desktop/dd/ostatnie_laby/LabVGA/VGA_Modul.vhd 2019/01/15.15:49:0
 FL F:/UCiSW/LabVGA/pixelowymodul.vhd 2019/03/25.13:31:06 P.20131013
 FL F:/UCiSW/LabVGA/schematvga.vhf 2019/03/25.13:02:04 P.20131013
 FL F:/UCiSW/LabVGA/VGA_Modul.vhd 2019/03/11.13:35:38 P.20131013
-FL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd 2019/04/08.13:41:38 P.20131013
-EN work/picture1 1554723700 FL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd \
+FL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd 2019/05/06.13:32:14 P.20131013
+EN work/picture1 1557142338 FL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/NUMERIC_BIT 1381692180
-AR work/picture1/Behavioral 1554723701 \
-      FL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd EN work/picture1 1554723700
+AR work/picture1/Behavioral 1557142339 \
+      FL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd EN work/picture1 1557142338
 FL F:/UCiSW_HERE/LabVGA/schematvga.vhf 2019/04/08.13:28:08 P.20131013
-EN work/schematvga 1554723704 FL F:/UCiSW_HERE/LabVGA/schematvga.vhf \
+EN work/schematvga 1557142342 FL F:/UCiSW_HERE/LabVGA/schematvga.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/schematvga/BEHAVIORAL 1554723705 \
-      FL F:/UCiSW_HERE/LabVGA/schematvga.vhf EN work/schematvga 1554723704 \
+AR work/schematvga/BEHAVIORAL 1557142343 \
+      FL F:/UCiSW_HERE/LabVGA/schematvga.vhf EN work/schematvga 1557142342 \
       CP picture1 CP vgaControler CP PS2_Mouse CP LCD1x64
 FL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd 2019/04/08.13:41:38 P.20131013
-EN work/vgaControler 1554723702 FL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd \
+EN work/vgaControler 1557142340 FL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/vgaControler/Behavioral 1554723703 \
-      FL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd EN work/vgaControler 1554723702
+AR work/vgaControler/Behavioral 1557142341 \
+      FL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd EN work/vgaControler 1557142340

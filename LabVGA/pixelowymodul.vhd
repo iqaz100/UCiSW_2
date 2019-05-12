@@ -29,24 +29,84 @@ architecture Behavioral of picture1 is
 
 signal P_X : signed(11 downto 0); --range 184 to 984; --bylo (signal P_X : integer;)
 signal P_Y : signed(11 downto 0); --range 29 to 628;
-signal ULX : signed(11 downto 0) := 584;
-signal ULY : signed(11 downto 0) := 329;
+signal ULX : signed(11 downto 0) := "001001001000";
+signal ULY : signed(11 downto 0) := "000101001001";
+signal targetX : signed(11 downto 0) := "001001001110";
+signal targetY : signed(11 downto 0) := "000100000111";
+signal randX : signed(11 downto 0) :="000000000000";
+signal randY : signed(11 downto 0) :="000000000000";
+
+--signal P_X : integer range 184 to 984;
+--signal P_Y : integer range 29 to 628;
+--signal ULX : integer := 584;
+--signal ULY : integer := 329;
 
 begin
-	P_Y <= To_Integer(Unsigned(PIX_Y));
-   P_X <= To_Integer(Unsigned(PIX_X));
+	P_Y <= Signed("00" & PIX_Y);
+   P_X <= Signed("00" & PIX_X);
    
-   moveMouse: process(B2_X, B3_Y, CLK_50MHz)
+   moveMouse: process(B2_X, B3_Y, B1_Status, CLK_50MHz)
 
    begin
+         --if (rising_edge(CLK_50MHz)) then
+         
+            --randX <= (randX + 1)mod 800 + 184;
+            --randY <= (randY + 1)mod 600 + 29;
+            
+           -- randX <= (randX + 1)mod 512 + 184;
+           -- randY <= (randY + 1)mod 512 + 29;
+         
+        -- end if;
+         
          if (rising_edge(CLK_50MHz) and (DataRdy = '1')) then
+           
             --ULX <= ULX + To_Integer(Unsigned(B2_X));
             --ULY <= ULY + To_Integer(Unsigned(B3_Y));
-            ULX <= To_integer((To_signed(ULX, 10)) + Signed(B2_X));
-            ULY <= To_integer((To_signed(ULY, 10)) - Signed(B3_Y));
+            ULX <= ULX + Signed(B2_X);
+            ULY <= ULY - Signed(B3_Y);
+            
+            if(ULX < "000010111000") then   ---DODAC LADNE FORMATOWANIE I KOMENTARZE HERE
+               ULX <="000010111000"; --184
+            elsif(ULX > "001111011000" - 10) then
+               ULX <="001111011000" -10; --984
+            end if;
+               
+            if(ULY < "000000011101") then  --AND HERE
+               ULY <="000000011101"; --29
+            elsif(ULY > "001001110101" - 10) then
+               ULY <="001001110101" - 10; --628
+            end if;
+            
+            if(ULX < targetX + 25 and ULX > targetX and ULY < targetY + 25 and ULY > targetY and (B1_Status(3 downto 0)= X"9") ) then
+               targetX<= randX;
+               targetY<= randY;
+            end if;
+            
+            
          end if;
+         
+
                
    end process moveMouse;
+   
+   random_pos : process (CLK_50MHz)
+   begin
+   
+   if(rising_edge(CLK_50MHz)) then
+      randX <= randX + 1;
+   
+      if(randX>984) then
+         randX<="000010111000";
+         randY <= randY + 1;
+      end if;
+      if(randY>627) then
+         randY<="000000011101";
+         randX<="000010111000";
+      end if;
+   end if;
+   
+  
+   end process random_pos;
    
    
 	get_color : process(PIX_X, PIX_Y, B1_Status)
@@ -58,13 +118,27 @@ begin
          elsif (B1_status(3 downto 0)=X"A") then
             RGB <= "100";
          end if;  
+
+
+----------------WARUNKI RYSOWANIA CELU DO STRZELANIA ---------------
+               
+          if (P_Y > targetY and P_Y < targetY + 25) then 
+              if (P_X > targetX and P_X < targetX + 25) then
+                     RGB <= "101";
+              end if;
+          end if;
+          
+--------------------WARUNKI RYSOWANIA CELOWNIKA---------------------
       
-      --ten warunek cos sie psuje
-          if (P_Y > ULY and P_Y < ULY + 10) then  --kwadrat
+          if (P_Y > ULY and P_Y < ULY + 10) then  
               if (P_X > ULX and P_X < ULX + 10) then
                      RGB <= "000";
               end if;
-          end if;   
+          end if; 
+          
+ 
+            
+        
          
 	end process get_color;
 	
