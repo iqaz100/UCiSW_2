@@ -283,3 +283,69 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schemat
 par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
 bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+xst -intstyle ise -ifn "F:/UCiSW_HERE/LabVGA/schematvga.xst" -ofn "F:/UCiSW_HERE/LabVGA/schematvga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-5 schematvga.ngc schematvga.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o schematvga_map.ncd schematvga.ngd schematvga.pcf 
+par -w -intstyle ise -ol high -t 1 schematvga_map.ncd schematvga.ncd schematvga.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml schematvga.twx schematvga.ncd -o schematvga.twr schematvga.pcf -ucf LCD.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f schematvga.ut schematvga.ncd 

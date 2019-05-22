@@ -21,11 +21,12 @@ entity picture1 is
            DataRdy : in STD_LOGIC;
            CLK_50MHz : in  STD_LOGIC;
            
+           SCORE : out STD_LOGIC_VECTOR (7 downto 0);
+           LIFES : out STD_LOGIC_VECTOR (7 downto 0);           
            RGB : out  STD_LOGIC_VECTOR (2 downto 0));
 end picture1;
 
 architecture Behavioral of picture1 is
-
 
 signal P_X : signed(11 downto 0); --range 184 to 984; --bylo (signal P_X : integer;)
 signal P_Y : signed(11 downto 0); --range 29 to 628;
@@ -35,6 +36,9 @@ signal targetX : signed(11 downto 0) := "001001001110";
 signal targetY : signed(11 downto 0) := "000100000111";
 signal randX : signed(11 downto 0) :="000000000000";
 signal randY : signed(11 downto 0) :="000000000000";
+signal tempScore: signed(7 downto 0) :="00000000";
+signal tempLifes: signed(7 downto 0) :="00000011";
+signal isClicked: signed(0 downto 0) :="0";
 
 --signal P_X : integer range 184 to 984;
 --signal P_Y : integer range 29 to 628;
@@ -45,9 +49,11 @@ begin
 	P_Y <= Signed("00" & PIX_Y);
    P_X <= Signed("00" & PIX_X);
    
-   moveMouse: process(B2_X, B3_Y, B1_Status, CLK_50MHz)
+   moveMouse: process(B2_X, B3_Y, B1_Status, CLK_50MHz, tempLifes, tempScore)
 
    begin
+         LIFES<= STD_LOGIC_VECTOR(tempLifes);
+         SCORE <= STD_LOGIC_VECTOR(tempScore);
          --if (rising_edge(CLK_50MHz)) then
          
             --randX <= (randX + 1)mod 800 + 184;
@@ -62,8 +68,10 @@ begin
            
             --ULX <= ULX + To_Integer(Unsigned(B2_X));
             --ULY <= ULY + To_Integer(Unsigned(B3_Y));
-            ULX <= ULX + Signed(B2_X);
-            ULY <= ULY - Signed(B3_Y);
+            --if(not(B1_Status(3 downto 0) = X"9")) then            
+               ULX <= ULX + Signed(B2_X);
+               ULY <= ULY - Signed(B3_Y);
+           -- end if;
             
             if(ULX < "000010111000") then   ---DODAC LADNE FORMATOWANIE I KOMENTARZE HERE
                ULX <="000010111000"; --184
@@ -77,10 +85,29 @@ begin
                ULY <="001001110101" - 10; --628
             end if;
             
+            -----------------------------SPRAWDZANIE CZY TRAFILISMY W CEL-----------------------------------------
+            
             if(ULX < targetX + 25 and ULX > targetX and ULY < targetY + 25 and ULY > targetY and (B1_Status(3 downto 0)= X"9") ) then
+               isClicked<="1";
                targetX<= randX;
                targetY<= randY;
+               tempScore <= tempScore + 1;
+               SCORE <= STD_LOGIC_VECTOR(tempScore);
+            elsif((B1_Status(3 downto 0)= X"9") and (isClicked="0")) then
+               tempLifes <= tempLifes - 1;
+               isClicked<="1";
+               LIFES <= STD_LOGIC_VECTOR(tempLifes);
+            elsif(not(B1_Status(3 downto 0) = X"9")) then
+               isClicked<="0";
             end if;
+            
+            
+            if(B1_Status(3 downto 0)=X"C") then
+               tempLifes<="00000011";
+               tempScore<="00000000";
+            end if;
+            
+
             
             
          end if;
@@ -95,11 +122,11 @@ begin
    if(rising_edge(CLK_50MHz)) then
       randX <= randX + 1;
    
-      if(randX>984) then
+      if(randX>944) then
          randX<="000010111000";
          randY <= randY + 1;
       end if;
-      if(randY>627) then
+      if(randY>577) then
          randY<="000000011101";
          randX<="000010111000";
       end if;
@@ -109,15 +136,15 @@ begin
    end process random_pos;
    
    
-	get_color : process(PIX_X, PIX_Y, B1_Status)
+	get_color : process(PIX_X, PIX_Y, B1_Status, tempLifes, P_Y, P_X, ULY, ULX, targetY, targetX)
 	begin
       
        RGB <= "111"; --t³o
-         if(B1_Status(3 downto 0)=X"9") then
-            RGB <= "010";
-         elsif (B1_status(3 downto 0)=X"A") then
-            RGB <= "100";
-         end if;  
+         --if(B1_Status(3 downto 0)=X"9") then
+          --  RGB <= "010";
+        -- elsif (B1_status(3 downto 0)=X"A") then
+          --  RGB <= "100";
+        -- end if;  
 
 
 ----------------WARUNKI RYSOWANIA CELU DO STRZELANIA ---------------
@@ -136,6 +163,17 @@ begin
               end if;
           end if; 
           
+--------------------WARUNEK PORAZKI---------------------------------
+
+          if(tempLifes<1)then
+            RGB <= "100";
+          end if;
+            
+--------------------RESTART GRY-------------------------------------
+          if(B1_Status(3 downto 0)=X"C") then
+            RGB <="111";
+          end if;
+            
  
             
         

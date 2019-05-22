@@ -1,6 +1,6 @@
-EN schematvga NULL F:/UCiSW_HERE/LabVGA/schematvga.vhf sub00/vhpl04 1557142342
-EN picture1 NULL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd sub00/vhpl02 1557142338
-AR vgacontroler behavioral F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd sub00/vhpl01 1557142341
-EN vgacontroler NULL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd sub00/vhpl00 1557142340
-AR schematvga behavioral F:/UCiSW_HERE/LabVGA/schematvga.vhf sub00/vhpl05 1557142343
-AR picture1 behavioral F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd sub00/vhpl03 1557142339
+EN schematvga NULL F:/UCiSW_HERE/LabVGA/schematvga.vhf sub00/vhpl04 1558353103
+EN picture1 NULL F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd sub00/vhpl02 1558353099
+AR vgacontroler behavioral F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd sub00/vhpl01 1558353102
+EN vgacontroler NULL F:/UCiSW_HERE/LabVGA/VGA_Modul.vhd sub00/vhpl00 1558353101
+AR schematvga behavioral F:/UCiSW_HERE/LabVGA/schematvga.vhf sub00/vhpl05 1558353104
+AR picture1 behavioral F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd sub00/vhpl03 1558353100

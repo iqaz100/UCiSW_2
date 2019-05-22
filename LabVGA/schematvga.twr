@@ -37,528 +37,513 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "CLK_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 17357 paths analyzed, 1013 endpoints analyzed, 0 failing endpoints
+ 23212 paths analyzed, 1084 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.103ns.
+ Minimum period is  10.707ns.
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_1/targetX_1 (SLICE_X20Y60.CE), 304 paths
+Paths for end point XLXI_1/tempLifes_6 (SLICE_X39Y42.CE), 323 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     11.897ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     9.293ns (requirement - (data path - clock path skew + uncertainty))
   Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_1 (FF)
+  Destination:          XLXI_1/tempLifes_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.103ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      10.702ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.103 - 0.108)
   Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_1
+  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/tempLifes_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
+    SLICE_X2Y60.YQ       Tcko                  0.567   XLXI_1/targetY<1>
                                                        XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
+    SLICE_X3Y61.F2       net (fanout=3)        0.447   XLXI_1/targetY<0>
+    SLICE_X3Y61.COUT     Topcyf                1.011   XLXI_1/RGB_add0000<0>
                                                        XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
                                                        XLXI_1/Madd_RGB_add0000_cy<0>
                                                        XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+    SLICE_X3Y62.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<9>
-    SLICE_X21Y72.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
-    SLICE_X21Y72.Y       Tciny                 0.756   XLXI_1/RGB_add0000<10>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
                                                        XLXI_1/Madd_RGB_add0000_cy<10>
                                                        XLXI_1/Madd_RGB_add0000_xor<11>
-    SLICE_X23Y72.G2      net (fanout=2)        0.366   XLXI_1/RGB_add0000<11>
-    SLICE_X23Y72.COUT    Topcyg                0.871   XLXI_1/targetX_cmp_ge0001
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y60.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y60.CLK     Tceck                 0.483   XLXI_1/targetX<1>
-                                                       XLXI_1/targetX_1
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CE      net (fanout=4)        2.014   XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CLK     Tceck                 0.483   XLXI_1/tempLifes<6>
+                                                       XLXI_1/tempLifes_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.103ns (4.760ns logic, 3.343ns route)
-                                                       (58.7% logic, 41.3% route)
+    Total                                     10.702ns (4.825ns logic, 5.877ns route)
+                                                       (45.1% logic, 54.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.913ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_1 (FF)
+Slack (setup path):     9.383ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_1 (FF)
+  Destination:          XLXI_1/tempLifes_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      10.612ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.103 - 0.108)
   Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_1
+  Maximum Data Path: XLXI_1/targetY_1 to XLXI_1/tempLifes_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
+    SLICE_X2Y60.XQ       Tcko                  0.515   XLXI_1/targetY<1>
+                                                       XLXI_1/targetY_1
+    SLICE_X3Y61.G1       net (fanout=3)        0.549   XLXI_1/targetY<1>
+    SLICE_X3Y61.COUT     Topcyg                0.871   XLXI_1/RGB_add0000<0>
+                                                       XLXI_1/targetY<1>_rt
                                                        XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+    SLICE_X3Y62.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.Y       Tciny                 0.756   XLXI_1/RGB_add0000<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<4>
-                                                       XLXI_1/Madd_RGB_add0000_xor<5>
-    SLICE_X23Y69.G2      net (fanout=2)        0.350   XLXI_1/RGB_add0000<5>
-    SLICE_X23Y69.COUT    Topcyg                0.871   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<5>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-    SLICE_X23Y70.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-    SLICE_X23Y70.COUT    Tbyp                  0.103   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<6>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-    SLICE_X23Y71.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-    SLICE_X23Y71.COUT    Tbyp                  0.103   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<8>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.COUT    Tbyp                  0.103   XLXI_1/targetX_cmp_ge0001
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<10>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y60.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y60.CLK     Tceck                 0.483   XLXI_1/targetX<1>
-                                                       XLXI_1/targetX_1
-    -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (4.760ns logic, 3.327ns route)
-                                                       (58.9% logic, 41.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     11.913ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
-                                                       XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.Y       Tciny                 0.756   XLXI_1/RGB_add0000<8>
-                                                       XLXI_1/Madd_RGB_add0000_cy<8>
-                                                       XLXI_1/Madd_RGB_add0000_xor<9>
-    SLICE_X23Y71.G2      net (fanout=2)        0.350   XLXI_1/RGB_add0000<9>
-    SLICE_X23Y71.COUT    Topcyg                0.871   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.COUT    Tbyp                  0.103   XLXI_1/targetX_cmp_ge0001
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<10>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y60.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y60.CLK     Tceck                 0.483   XLXI_1/targetX<1>
-                                                       XLXI_1/targetX_1
-    -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (4.760ns logic, 3.327ns route)
-                                                       (58.9% logic, 41.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_1/targetX_0 (SLICE_X20Y60.CE), 304 paths
---------------------------------------------------------------------------------
-Slack (setup path):     11.897ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_0 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.103ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
-                                                       XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<6>
-                                                       XLXI_1/Madd_RGB_add0000_cy<6>
-                                                       XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<9>
-    SLICE_X21Y72.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
-    SLICE_X21Y72.Y       Tciny                 0.756   XLXI_1/RGB_add0000<10>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
                                                        XLXI_1/Madd_RGB_add0000_cy<10>
                                                        XLXI_1/Madd_RGB_add0000_xor<11>
-    SLICE_X23Y72.G2      net (fanout=2)        0.366   XLXI_1/RGB_add0000<11>
-    SLICE_X23Y72.COUT    Topcyg                0.871   XLXI_1/targetX_cmp_ge0001
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y60.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y60.CLK     Tceck                 0.483   XLXI_1/targetX<1>
-                                                       XLXI_1/targetX_0
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CE      net (fanout=4)        2.014   XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CLK     Tceck                 0.483   XLXI_1/tempLifes<6>
+                                                       XLXI_1/tempLifes_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.103ns (4.760ns logic, 3.343ns route)
-                                                       (58.7% logic, 41.3% route)
+    Total                                     10.612ns (4.633ns logic, 5.979ns route)
+                                                       (43.7% logic, 56.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.913ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_0 (FF)
+Slack (setup path):     9.462ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_2 (FF)
+  Destination:          XLXI_1/tempLifes_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      10.533ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.005ns (0.103 - 0.108)
   Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_0
+  Maximum Data Path: XLXI_1/targetY_2 to XLXI_1/tempLifes_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
-                                                       XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+    SLICE_X2Y64.YQ       Tcko                  0.567   XLXI_1/targetY<3>
+                                                       XLXI_1/targetY_2
+    SLICE_X3Y62.F4       net (fanout=3)        0.381   XLXI_1/targetY<2>
+    SLICE_X3Y62.COUT     Topcyf                1.011   XLXI_1/RGB_add0000<2>
+                                                       XLXI_1/targetY<2>_rt
                                                        XLXI_1/Madd_RGB_add0000_cy<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.Y       Tciny                 0.756   XLXI_1/RGB_add0000<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<4>
-                                                       XLXI_1/Madd_RGB_add0000_xor<5>
-    SLICE_X23Y69.G2      net (fanout=2)        0.350   XLXI_1/RGB_add0000<5>
-    SLICE_X23Y69.COUT    Topcyg                0.871   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<5>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-    SLICE_X23Y70.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-    SLICE_X23Y70.COUT    Tbyp                  0.103   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<6>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-    SLICE_X23Y71.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-    SLICE_X23Y71.COUT    Tbyp                  0.103   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<8>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.COUT    Tbyp                  0.103   XLXI_1/targetX_cmp_ge0001
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<10>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y60.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y60.CLK     Tceck                 0.483   XLXI_1/targetX<1>
-                                                       XLXI_1/targetX_0
-    -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (4.760ns logic, 3.327ns route)
-                                                       (58.9% logic, 41.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     11.913ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_0 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
-                                                       XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.Y       Tciny                 0.756   XLXI_1/RGB_add0000<8>
-                                                       XLXI_1/Madd_RGB_add0000_cy<8>
-                                                       XLXI_1/Madd_RGB_add0000_xor<9>
-    SLICE_X23Y71.G2      net (fanout=2)        0.350   XLXI_1/RGB_add0000<9>
-    SLICE_X23Y71.COUT    Topcyg                0.871   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.COUT    Tbyp                  0.103   XLXI_1/targetX_cmp_ge0001
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<10>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y60.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y60.CLK     Tceck                 0.483   XLXI_1/targetX<1>
-                                                       XLXI_1/targetX_0
-    -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (4.760ns logic, 3.327ns route)
-                                                       (58.9% logic, 41.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_1/targetX_3 (SLICE_X20Y61.CE), 304 paths
---------------------------------------------------------------------------------
-Slack (setup path):     11.897ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_3 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.103ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
-                                                       XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<6>
-                                                       XLXI_1/Madd_RGB_add0000_cy<6>
-                                                       XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<9>
-    SLICE_X21Y72.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
-    SLICE_X21Y72.Y       Tciny                 0.756   XLXI_1/RGB_add0000<10>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
                                                        XLXI_1/Madd_RGB_add0000_cy<10>
                                                        XLXI_1/Madd_RGB_add0000_xor<11>
-    SLICE_X23Y72.G2      net (fanout=2)        0.366   XLXI_1/RGB_add0000<11>
-    SLICE_X23Y72.COUT    Topcyg                0.871   XLXI_1/targetX_cmp_ge0001
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y61.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y61.CLK     Tceck                 0.483   XLXI_1/targetX<3>
-                                                       XLXI_1/targetX_3
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CE      net (fanout=4)        2.014   XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CLK     Tceck                 0.483   XLXI_1/tempLifes<6>
+                                                       XLXI_1/tempLifes_6
     -------------------------------------------------  ---------------------------
-    Total                                      8.103ns (4.760ns logic, 3.343ns route)
-                                                       (58.7% logic, 41.3% route)
+    Total                                     10.533ns (4.722ns logic, 5.811ns route)
+                                                       (44.8% logic, 55.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     11.913ns (requirement - (data path - clock path skew + uncertainty))
+
+Paths for end point XLXI_1/tempLifes_7 (SLICE_X39Y42.CE), 323 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.293ns (requirement - (data path - clock path skew + uncertainty))
   Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_3 (FF)
+  Destination:          XLXI_1/tempLifes_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      10.702ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.103 - 0.108)
   Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_3
+  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/tempLifes_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
+    SLICE_X2Y60.YQ       Tcko                  0.567   XLXI_1/targetY<1>
                                                        XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
+    SLICE_X3Y61.F2       net (fanout=3)        0.447   XLXI_1/targetY<0>
+    SLICE_X3Y61.COUT     Topcyf                1.011   XLXI_1/RGB_add0000<0>
                                                        XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
                                                        XLXI_1/Madd_RGB_add0000_cy<0>
                                                        XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+    SLICE_X3Y62.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<2>
                                                        XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.Y       Tciny                 0.756   XLXI_1/RGB_add0000<4>
-                                                       XLXI_1/Madd_RGB_add0000_cy<4>
-                                                       XLXI_1/Madd_RGB_add0000_xor<5>
-    SLICE_X23Y69.G2      net (fanout=2)        0.350   XLXI_1/RGB_add0000<5>
-    SLICE_X23Y69.COUT    Topcyg                0.871   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<5>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-    SLICE_X23Y70.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<5>
-    SLICE_X23Y70.COUT    Tbyp                  0.103   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<6>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-    SLICE_X23Y71.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<7>
-    SLICE_X23Y71.COUT    Tbyp                  0.103   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<8>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.COUT    Tbyp                  0.103   XLXI_1/targetX_cmp_ge0001
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<10>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y61.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y61.CLK     Tceck                 0.483   XLXI_1/targetX<3>
-                                                       XLXI_1/targetX_3
-    -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (4.760ns logic, 3.327ns route)
-                                                       (58.9% logic, 41.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     11.913ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/targetY_0 (FF)
-  Destination:          XLXI_1/targetX_3 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      8.087ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/targetX_3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X20Y62.YQ      Tcko                  0.567   XLXI_1/targetY<1>
-                                                       XLXI_1/targetY_0
-    SLICE_X21Y67.F1      net (fanout=3)        0.953   XLXI_1/targetY<0>
-    SLICE_X21Y67.COUT    Topcyf                1.011   XLXI_1/RGB_add0000<0>
-                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
-                                                       XLXI_1/Madd_RGB_add0000_cy<0>
-                                                       XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
-    SLICE_X21Y68.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<2>
-                                                       XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
-    SLICE_X21Y69.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<4>
                                                        XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
-    SLICE_X21Y70.COUT    Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<6>
                                                        XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.CIN     net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
-    SLICE_X21Y71.Y       Tciny                 0.756   XLXI_1/RGB_add0000<8>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
                                                        XLXI_1/Madd_RGB_add0000_cy<8>
-                                                       XLXI_1/Madd_RGB_add0000_xor<9>
-    SLICE_X23Y71.G2      net (fanout=2)        0.350   XLXI_1/RGB_add0000<9>
-    SLICE_X23Y71.COUT    Topcyg                0.871   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<9>
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.CIN     net (fanout=1)        0.000   XLXI_1/Mcompar_targetX_cmp_ge0001_cy<9>
-    SLICE_X23Y72.COUT    Tbyp                  0.103   XLXI_1/targetX_cmp_ge0001
-                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_xor<11>
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
                                                        XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
-    SLICE_X22Y63.F4      net (fanout=1)        0.977   XLXI_1/targetX_cmp_ge0001
-    SLICE_X22Y63.X       Tilo                  0.660   XLXI_1/targetX_not0001
-                                                       XLXI_1/targetX_not000156
-    SLICE_X20Y61.CE      net (fanout=12)       1.047   XLXI_1/targetX_not0001
-    SLICE_X20Y61.CLK     Tceck                 0.483   XLXI_1/targetX<3>
-                                                       XLXI_1/targetX_3
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CE      net (fanout=4)        2.014   XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CLK     Tceck                 0.483   XLXI_1/tempLifes<6>
+                                                       XLXI_1/tempLifes_7
     -------------------------------------------------  ---------------------------
-    Total                                      8.087ns (4.760ns logic, 3.327ns route)
-                                                       (58.9% logic, 41.1% route)
+    Total                                     10.702ns (4.825ns logic, 5.877ns route)
+                                                       (45.1% logic, 54.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.383ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_1 (FF)
+  Destination:          XLXI_1/tempLifes_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.612ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.103 - 0.108)
+  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/targetY_1 to XLXI_1/tempLifes_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y60.XQ       Tcko                  0.515   XLXI_1/targetY<1>
+                                                       XLXI_1/targetY_1
+    SLICE_X3Y61.G1       net (fanout=3)        0.549   XLXI_1/targetY<1>
+    SLICE_X3Y61.COUT     Topcyg                0.871   XLXI_1/RGB_add0000<0>
+                                                       XLXI_1/targetY<1>_rt
+                                                       XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_xor<11>
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CE      net (fanout=4)        2.014   XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CLK     Tceck                 0.483   XLXI_1/tempLifes<6>
+                                                       XLXI_1/tempLifes_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.612ns (4.633ns logic, 5.979ns route)
+                                                       (43.7% logic, 56.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.462ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_2 (FF)
+  Destination:          XLXI_1/tempLifes_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.533ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.005ns (0.103 - 0.108)
+  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/targetY_2 to XLXI_1/tempLifes_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y64.YQ       Tcko                  0.567   XLXI_1/targetY<3>
+                                                       XLXI_1/targetY_2
+    SLICE_X3Y62.F4       net (fanout=3)        0.381   XLXI_1/targetY<2>
+    SLICE_X3Y62.COUT     Topcyf                1.011   XLXI_1/RGB_add0000<2>
+                                                       XLXI_1/targetY<2>_rt
+                                                       XLXI_1/Madd_RGB_add0000_cy<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_xor<11>
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CE      net (fanout=4)        2.014   XLXI_1/tempLifes_not0001
+    SLICE_X39Y42.CLK     Tceck                 0.483   XLXI_1/tempLifes<6>
+                                                       XLXI_1/tempLifes_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.533ns (4.722ns logic, 5.811ns route)
+                                                       (44.8% logic, 55.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/tempLifes_0 (SLICE_X39Y39.CE), 323 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.509ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_0 (FF)
+  Destination:          XLXI_1/tempLifes_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.484ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.101 - 0.108)
+  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/targetY_0 to XLXI_1/tempLifes_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y60.YQ       Tcko                  0.567   XLXI_1/targetY<1>
+                                                       XLXI_1/targetY_0
+    SLICE_X3Y61.F2       net (fanout=3)        0.447   XLXI_1/targetY<0>
+    SLICE_X3Y61.COUT     Topcyf                1.011   XLXI_1/RGB_add0000<0>
+                                                       XLXI_1/Madd_RGB_add0000_lut<0>_INV_0
+                                                       XLXI_1/Madd_RGB_add0000_cy<0>
+                                                       XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_xor<11>
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y39.CE      net (fanout=4)        1.796   XLXI_1/tempLifes_not0001
+    SLICE_X39Y39.CLK     Tceck                 0.483   XLXI_1/tempLifes<0>
+                                                       XLXI_1/tempLifes_0
+    -------------------------------------------------  ---------------------------
+    Total                                     10.484ns (4.825ns logic, 5.659ns route)
+                                                       (46.0% logic, 54.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.599ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_1 (FF)
+  Destination:          XLXI_1/tempLifes_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.394ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.101 - 0.108)
+  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/targetY_1 to XLXI_1/tempLifes_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y60.XQ       Tcko                  0.515   XLXI_1/targetY<1>
+                                                       XLXI_1/targetY_1
+    SLICE_X3Y61.G1       net (fanout=3)        0.549   XLXI_1/targetY<1>
+    SLICE_X3Y61.COUT     Topcyg                0.871   XLXI_1/RGB_add0000<0>
+                                                       XLXI_1/targetY<1>_rt
+                                                       XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<1>
+    SLICE_X3Y62.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_xor<11>
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y39.CE      net (fanout=4)        1.796   XLXI_1/tempLifes_not0001
+    SLICE_X39Y39.CLK     Tceck                 0.483   XLXI_1/tempLifes<0>
+                                                       XLXI_1/tempLifes_0
+    -------------------------------------------------  ---------------------------
+    Total                                     10.394ns (4.633ns logic, 5.761ns route)
+                                                       (44.6% logic, 55.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.678ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/targetY_2 (FF)
+  Destination:          XLXI_1/tempLifes_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.315ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.007ns (0.101 - 0.108)
+  Source Clock:         CLK_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/targetY_2 to XLXI_1/tempLifes_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y64.YQ       Tcko                  0.567   XLXI_1/targetY<3>
+                                                       XLXI_1/targetY_2
+    SLICE_X3Y62.F4       net (fanout=3)        0.381   XLXI_1/targetY<2>
+    SLICE_X3Y62.COUT     Topcyf                1.011   XLXI_1/RGB_add0000<2>
+                                                       XLXI_1/targetY<2>_rt
+                                                       XLXI_1/Madd_RGB_add0000_cy<2>
+                                                       XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<3>
+    SLICE_X3Y63.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<4>
+                                                       XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<5>
+    SLICE_X3Y64.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<6>
+                                                       XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<7>
+    SLICE_X3Y65.COUT     Tbyp                  0.103   XLXI_1/RGB_add0000<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<8>
+                                                       XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.CIN      net (fanout=1)        0.000   XLXI_1/Madd_RGB_add0000_cy<9>
+    SLICE_X3Y66.Y        Tciny                 0.756   XLXI_1/RGB_add0000<10>
+                                                       XLXI_1/Madd_RGB_add0000_cy<10>
+                                                       XLXI_1/Madd_RGB_add0000_xor<11>
+    SLICE_X2Y59.G2       net (fanout=2)        1.032   XLXI_1/RGB_add0000<11>
+    SLICE_X2Y59.COUT     Topcyg                0.984   XLXI_1/targetX_cmp_ge0001
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>
+                                                       XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11>
+    SLICE_X25Y48.F2      net (fanout=4)        2.384   XLXI_1/targetX_cmp_ge0001
+    SLICE_X25Y48.X       Tilo                  0.612   XLXI_1/tempLifes_not0001
+                                                       XLXI_1/tempLifes_not0001
+    SLICE_X39Y39.CE      net (fanout=4)        1.796   XLXI_1/tempLifes_not0001
+    SLICE_X39Y39.CLK     Tceck                 0.483   XLXI_1/tempLifes<0>
+                                                       XLXI_1/tempLifes_0
+    -------------------------------------------------  ---------------------------
+    Total                                     10.315ns (4.722ns logic, 5.593ns route)
+                                                       (45.8% logic, 54.2% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "CLK_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_3/Mshreg_srCmdF4_5 (SLICE_X64Y67.BY), 1 path
+Paths for end point XLXI_3/Mshreg_srCmdF4_5 (SLICE_X64Y66.BY), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.747ns (requirement - (clock path skew + uncertainty - data path))
   Source:               XLXI_3/srCmdF4_9 (FF)
@@ -576,8 +561,8 @@ Slack (hold path):      0.747ns (requirement - (clock path skew + uncertainty - 
     -------------------------------------------------  -------------------
     SLICE_X65Y66.XQ      Tcko                  0.411   XLXI_3/srCmdF4<9>
                                                        XLXI_3/srCmdF4_9
-    SLICE_X64Y67.BY      net (fanout=1)        0.446   XLXI_3/srCmdF4<9>
-    SLICE_X64Y67.CLK     Tdh         (-Th)     0.110   XLXI_3/srCmdF4_51
+    SLICE_X64Y66.BY      net (fanout=1)        0.446   XLXI_3/srCmdF4<9>
+    SLICE_X64Y66.CLK     Tdh         (-Th)     0.110   XLXI_3/srCmdF4_51
                                                        XLXI_3/Mshreg_srCmdF4_5
     -------------------------------------------------  ---------------------------
     Total                                      0.747ns (0.301ns logic, 0.446ns route)
@@ -585,34 +570,7 @@ Slack (hold path):      0.747ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_3/srCmdF4_3 (SLICE_X65Y68.BX), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.799ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_3/srCmdF4_4 (FF)
-  Destination:          XLXI_3/srCmdF4_3 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.799ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_50MHz_BUFGP rising at 20.000ns
-  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: XLXI_3/srCmdF4_4 to XLXI_3/srCmdF4_3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X65Y66.YQ      Tcko                  0.409   XLXI_3/srCmdF4<9>
-                                                       XLXI_3/srCmdF4_4
-    SLICE_X65Y68.BX      net (fanout=1)        0.310   XLXI_3/srCmdF4<4>
-    SLICE_X65Y68.CLK     Tckdi       (-Th)    -0.080   XLXI_3/srCmdF4<3>
-                                                       XLXI_3/srCmdF4_3
-    -------------------------------------------------  ---------------------------
-    Total                                      0.799ns (0.489ns logic, 0.310ns route)
-                                                       (61.2% logic, 38.8% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_3/State_FSM_FFd10_shift2 (SLICE_X65Y69.BX), 1 path
+Paths for end point XLXI_3/State_FSM_FFd10_shift2 (SLICE_X65Y64.BX), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
   Source:               XLXI_3/State_FSM_FFd10_shift1 (FF)
@@ -628,14 +586,41 @@ Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X65Y69.YQ      Tcko                  0.409   XLXI_3/State_FSM_FFd10_shift2
+    SLICE_X65Y64.YQ      Tcko                  0.409   XLXI_3/State_FSM_FFd10_shift2
                                                        XLXI_3/State_FSM_FFd10_shift1
-    SLICE_X65Y69.BX      net (fanout=1)        0.317   XLXI_3/State_FSM_FFd10_shift1
-    SLICE_X65Y69.CLK     Tckdi       (-Th)    -0.080   XLXI_3/State_FSM_FFd10_shift2
+    SLICE_X65Y64.BX      net (fanout=1)        0.317   XLXI_3/State_FSM_FFd10_shift1
+    SLICE_X65Y64.CLK     Tckdi       (-Th)    -0.080   XLXI_3/State_FSM_FFd10_shift2
                                                        XLXI_3/State_FSM_FFd10_shift2
     -------------------------------------------------  ---------------------------
     Total                                      0.806ns (0.489ns logic, 0.317ns route)
                                                        (60.7% logic, 39.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_3/State_FSM_FFd10_shift3 (SLICE_X65Y67.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.836ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_3/State_FSM_FFd10_shift2 (FF)
+  Destination:          XLXI_3/State_FSM_FFd10_shift3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.838ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.005 - 0.003)
+  Source Clock:         CLK_50MHz_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_3/State_FSM_FFd10_shift2 to XLXI_3/State_FSM_FFd10_shift3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y64.XQ      Tcko                  0.411   XLXI_3/State_FSM_FFd10_shift2
+                                                       XLXI_3/State_FSM_FFd10_shift2
+    SLICE_X65Y67.BY      net (fanout=1)        0.310   XLXI_3/State_FSM_FFd10_shift2
+    SLICE_X65Y67.CLK     Tckdi       (-Th)    -0.117   XLXI_3/State_FSM_FFd10_shift3
+                                                       XLXI_3/State_FSM_FFd10_shift3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.838ns (0.528ns logic, 0.310ns route)
+                                                       (63.0% logic, 37.0% route)
 
 --------------------------------------------------------------------------------
 
@@ -647,7 +632,7 @@ Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 0.719ns (Tcl)
   Physical resource: XLXI_2/h_cnt<0>/CLK
   Logical resource: XLXI_2/h_cnt_0/CK
-  Location pin: SLICE_X32Y67.CLK
+  Location pin: SLICE_X44Y76.CLK
   Clock network: CLK_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.562ns (period - (min high pulse limit / (high pulse / period)))
@@ -656,7 +641,7 @@ Slack: 18.562ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 0.719ns (Tch)
   Physical resource: XLXI_2/h_cnt<0>/CLK
   Logical resource: XLXI_2/h_cnt_0/CK
-  Location pin: SLICE_X32Y67.CLK
+  Location pin: SLICE_X44Y76.CLK
   Clock network: CLK_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
@@ -665,7 +650,7 @@ Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 0.719ns (Tcl)
   Physical resource: XLXI_2/h_cnt<0>/CLK
   Logical resource: XLXI_2/h_cnt_1/CK
-  Location pin: SLICE_X32Y67.CLK
+  Location pin: SLICE_X44Y76.CLK
   Clock network: CLK_50MHz_BUFGP
 --------------------------------------------------------------------------------
 
@@ -682,7 +667,7 @@ Clock to Setup on destination clock CLK_50MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_50MHz      |    8.103|         |         |         |
+CLK_50MHz      |   10.707|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -691,23 +676,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 17357 paths, 0 nets, and 1668 connections
+Constraints cover 23212 paths, 0 nets, and 1754 connections
 
 Design statistics:
-   Minimum period:   8.103ns{1}   (Maximum frequency: 123.411MHz)
+   Minimum period:  10.707ns{1}   (Maximum frequency:  93.397MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon May 06 13:34:24 2019 
+Analysis completed Mon May 20 13:53:21 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 129 MB
+Peak Memory Usage: 122 MB
 
 
 

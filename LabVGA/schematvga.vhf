@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schematvga.vhf
--- /___/   /\     Timestamp : 04/08/2019 13:28:07
+-- /___/   /\     Timestamp : 05/20/2019 12:39:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -50,6 +50,9 @@ architecture BEHAVIORAL of schematvga is
    signal XLXN_2                  : std_logic_vector (9 downto 0);
    signal XLXN_70                 : std_logic_vector (15 downto 0);
    signal XLXN_71                 : std_logic_vector (9 downto 0);
+   signal XLXN_78                 : std_logic_vector (7 downto 0);
+   signal XLXN_79                 : std_logic_vector (7 downto 0);
+   signal XLXN_80                 : std_logic_vector (7 downto 0);
    signal LED1_DUMMY              : std_logic;
    signal XLXI_5_Reset_openSignal : std_logic;
    component picture1
@@ -60,7 +63,9 @@ architecture BEHAVIORAL of schematvga is
              B1_Status : in    std_logic_vector (7 downto 0); 
              B2_X      : in    std_logic_vector (7 downto 0); 
              B3_Y      : in    std_logic_vector (7 downto 0); 
-             RGB       : out   std_logic_vector (2 downto 0));
+             SCORE     : out   std_logic_vector (7 downto 0); 
+             RGB       : out   std_logic_vector (2 downto 0); 
+             LIFES     : out   std_logic_vector (7 downto 0));
    end component;
    
    component vgaControler
@@ -104,14 +109,16 @@ begin
    XLXN_70(15 downto 0) <= x"F888";
    LED1 <= LED1_DUMMY;
    XLXI_1 : picture1
-      port map (B1_Status(7 downto 0)=>line(7 downto 0),
-                B2_X(7 downto 0)=>line(15 downto 8),
-                B3_Y(7 downto 0)=>line(23 downto 16),
+      port map (B1_Status(7 downto 0)=>XLXN_78(7 downto 0),
+                B2_X(7 downto 0)=>XLXN_79(7 downto 0),
+                B3_Y(7 downto 0)=>XLXN_80(7 downto 0),
                 CLK_50MHz=>CLK_50MHz,
                 DataRdy=>LED1_DUMMY,
                 PIX_X(9 downto 0)=>XLXN_2(9 downto 0),
                 PIX_Y(9 downto 0)=>XLXN_71(9 downto 0),
-                RGB(2 downto 0)=>XLXN_1(2 downto 0));
+                LIFES(7 downto 0)=>line(15 downto 8),
+                RGB(2 downto 0)=>XLXN_1(2 downto 0),
+                SCORE(7 downto 0)=>line(7 downto 0));
    
    XLXI_2 : vgaControler
       port map (CLK_50MHz=>CLK_50MHz,
@@ -128,9 +135,9 @@ begin
       port map (Clk_Sys=>CLK_50MHz,
                 Clk_50MHz=>CLK_50MHz,
                 Reset=>BTN_SOUTH,
-                B1_Status(7 downto 0)=>line(7 downto 0),
-                B2_X(7 downto 0)=>line(15 downto 8),
-                B3_Y(7 downto 0)=>line(23 downto 16),
+                B1_Status(7 downto 0)=>XLXN_78(7 downto 0),
+                B2_X(7 downto 0)=>XLXN_79(7 downto 0),
+                B3_Y(7 downto 0)=>XLXN_80(7 downto 0),
                 DataRdy=>LED1_DUMMY,
                 InitOK=>LED0,
                 PS2_Clk=>PS2_Clk,

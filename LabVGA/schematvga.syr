@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: schematvga.prj
 
@@ -126,13 +126,11 @@ Analyzing hierarchy for entity <vgaControler> in library <work> (architecture <b
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <schematvga> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "F:/UCiSW_HERE/LabVGA/schematvga.vhf" line 127: Instantiating black box module <PS2_Mouse>.
-WARNING:Xst:2211 - "F:/UCiSW_HERE/LabVGA/schematvga.vhf" line 139: Instantiating black box module <LCD1x64>.
+WARNING:Xst:2211 - "F:/UCiSW_HERE/LabVGA/schematvga.vhf" line 134: Instantiating black box module <PS2_Mouse>.
+WARNING:Xst:2211 - "F:/UCiSW_HERE/LabVGA/schematvga.vhf" line 146: Instantiating black box module <LCD1x64>.
 Entity <schematvga> analyzed. Unit <schematvga> generated.
 
 Analyzing Entity <picture1> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd" line 112: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <P_Y>, <targetY>, <P_X>, <targetX>, <ULY>, <ULX>
 Entity <picture1> analyzed. Unit <picture1> generated.
 
 Analyzing Entity <vgaControler> in library <work> (Architecture <behavioral>).
@@ -148,41 +146,49 @@ Performing bidirectional port resolution...
 Synthesizing Unit <picture1>.
     Related source file is "F:/UCiSW_HERE/LabVGA/pixelowymodul.vhd".
 WARNING:Xst:647 - Input <B1_Status<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <isClicked<0>>.
     Found 12-bit up counter for signal <randX>.
-    Found 12-bit comparator greater for signal <randX$cmp_gt0000> created at line 102.
-    Found 12-bit comparator greater for signal <randX$cmp_gt0001> created at line 98.
+    Found 12-bit comparator greater for signal <randX$cmp_gt0000> created at line 129.
+    Found 12-bit comparator greater for signal <randX$cmp_gt0001> created at line 125.
     Found 12-bit up counter for signal <randY>.
-    Found 12-bit adder for signal <RGB$add0000> created at line 125.
-    Found 12-bit adder for signal <RGB$add0001> created at line 126.
-    Found 12-bit adder for signal <RGB$addsub0000> created at line 133.
-    Found 12-bit adder for signal <RGB$addsub0001> created at line 134.
-    Found 12-bit comparator greater for signal <RGB$cmp_gt0000> created at line 133.
-    Found 12-bit comparator greater for signal <RGB$cmp_gt0001> created at line 125.
-    Found 12-bit comparator greater for signal <RGB$cmp_gt0002> created at line 126.
-    Found 12-bit comparator greater for signal <RGB$cmp_gt0003> created at line 134.
-    Found 12-bit comparator less for signal <RGB$cmp_lt0000> created at line 133.
-    Found 12-bit comparator less for signal <RGB$cmp_lt0001> created at line 125.
-    Found 12-bit comparator less for signal <RGB$cmp_lt0002> created at line 126.
-    Found 12-bit comparator less for signal <RGB$cmp_lt0003> created at line 134.
+    Found 12-bit adder for signal <RGB$add0000> created at line 152.
+    Found 12-bit adder for signal <RGB$add0001> created at line 153.
+    Found 12-bit adder for signal <RGB$addsub0000> created at line 160.
+    Found 12-bit adder for signal <RGB$addsub0001> created at line 161.
+    Found 12-bit comparator greater for signal <RGB$cmp_gt0000> created at line 160.
+    Found 12-bit comparator greater for signal <RGB$cmp_gt0001> created at line 152.
+    Found 12-bit comparator greater for signal <RGB$cmp_gt0002> created at line 153.
+    Found 12-bit comparator greater for signal <RGB$cmp_gt0003> created at line 161.
+    Found 8-bit comparator less for signal <RGB$cmp_lt0000> created at line 168.
+    Found 12-bit comparator less for signal <RGB$cmp_lt0001> created at line 160.
+    Found 12-bit comparator less for signal <RGB$cmp_lt0002> created at line 152.
+    Found 12-bit comparator less for signal <RGB$cmp_lt0003> created at line 153.
+    Found 12-bit comparator less for signal <RGB$cmp_lt0004> created at line 161.
     Found 12-bit register for signal <targetX>.
-    Found 12-bit comparator greatequal for signal <targetX$cmp_ge0000> created at line 80.
-    Found 12-bit comparator greatequal for signal <targetX$cmp_ge0001> created at line 80.
-    Found 12-bit comparator lessequal for signal <targetX$cmp_le0000> created at line 80.
-    Found 12-bit comparator lessequal for signal <targetX$cmp_le0001> created at line 80.
+    Found 12-bit comparator greatequal for signal <targetX$cmp_ge0000> created at line 90.
+    Found 12-bit comparator greatequal for signal <targetX$cmp_ge0001> created at line 90.
+    Found 12-bit comparator lessequal for signal <targetX$cmp_le0000> created at line 90.
+    Found 12-bit comparator lessequal for signal <targetX$cmp_le0001> created at line 90.
     Found 12-bit register for signal <targetY>.
+    Found 8-bit down counter for signal <tempLifes>.
+    Found 12-bit comparator greater for signal <tempLifes$cmp_gt0000> created at line 90.
+    Found 12-bit comparator greater for signal <tempLifes$cmp_gt0001> created at line 90.
+    Found 12-bit comparator less for signal <tempLifes$cmp_lt0000> created at line 90.
+    Found 12-bit comparator less for signal <tempLifes$cmp_lt0001> created at line 90.
+    Found 8-bit up counter for signal <tempScore>.
     Found 12-bit register for signal <ULX>.
-    Found 12-bit adder for signal <ULX$addsub0000> created at line 65.
-    Found 12-bit comparator greater for signal <ULX$cmp_gt0000> created at line 69.
-    Found 12-bit comparator less for signal <ULX$cmp_lt0000> created at line 68.
+    Found 12-bit adder for signal <ULX$addsub0000> created at line 72.
+    Found 12-bit comparator greater for signal <ULX$cmp_gt0000> created at line 77.
+    Found 12-bit comparator less for signal <ULX$cmp_lt0000> created at line 76.
     Found 12-bit register for signal <ULY>.
-    Found 12-bit subtractor for signal <ULY$addsub0000> created at line 66.
-    Found 12-bit comparator greater for signal <ULY$cmp_gt0000> created at line 75.
-    Found 12-bit comparator less for signal <ULY$cmp_lt0000> created at line 74.
+    Found 12-bit subtractor for signal <ULY$addsub0000> created at line 73.
+    Found 12-bit comparator greater for signal <ULY$cmp_gt0000> created at line 83.
+    Found 12-bit comparator less for signal <ULY$cmp_lt0000> created at line 82.
     Summary:
-	inferred   2 Counter(s).
-	inferred  48 D-type flip-flop(s).
+	inferred   4 Counter(s).
+	inferred  49 D-type flip-flop(s).
 	inferred   6 Adder/Subtractor(s).
-	inferred  18 Comparator(s).
+	inferred  23 Comparator(s).
 Unit <picture1> synthesized.
 
 
@@ -206,7 +212,7 @@ Unit <vgaControler> synthesized.
 
 Synthesizing Unit <schematvga>.
     Related source file is "F:/UCiSW_HERE/LabVGA/schematvga.vhf".
-WARNING:Xst:653 - Signal <line<63:24>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000000000000000000000.
+WARNING:Xst:653 - Signal <line<63:16>> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000000000000000000000000000.
 WARNING:Xst:653 - Signal <XLXI_5_Reset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <schematvga> synthesized.
 
@@ -218,18 +224,22 @@ Macro Statistics
 # Adders/Subtractors                                   : 6
  12-bit adder                                          : 5
  12-bit subtractor                                     : 1
-# Counters                                             : 4
+# Counters                                             : 6
  12-bit up counter                                     : 2
  32-bit up counter                                     : 2
-# Registers                                            : 4
+ 8-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 5
+ 1-bit register                                        : 1
  12-bit register                                       : 4
-# Comparators                                          : 26
+# Comparators                                          : 31
  12-bit comparator greatequal                          : 2
- 12-bit comparator greater                             : 8
- 12-bit comparator less                                : 6
+ 12-bit comparator greater                             : 10
+ 12-bit comparator less                                : 8
  12-bit comparator lessequal                           : 2
  32-bit comparator greater                             : 2
  32-bit comparator less                                : 6
+ 8-bit comparator less                                 : 1
 
 =========================================================================
 
@@ -249,18 +259,21 @@ Macro Statistics
 # Adders/Subtractors                                   : 6
  12-bit adder                                          : 5
  12-bit subtractor                                     : 1
-# Counters                                             : 4
+# Counters                                             : 6
  12-bit up counter                                     : 2
  32-bit up counter                                     : 2
-# Registers                                            : 48
- Flip-Flops                                            : 48
-# Comparators                                          : 26
+ 8-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Comparators                                          : 31
  12-bit comparator greatequal                          : 2
- 12-bit comparator greater                             : 8
- 12-bit comparator less                                : 6
+ 12-bit comparator greater                             : 10
+ 12-bit comparator less                                : 8
  12-bit comparator lessequal                           : 2
  32-bit comparator greater                             : 2
  32-bit comparator less                                : 6
+ 8-bit comparator less                                 : 1
 
 =========================================================================
 
@@ -290,8 +303,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 136
- Flip-Flops                                            : 136
+# Registers                                            : 153
+ Flip-Flops                                            : 153
 
 =========================================================================
 
@@ -320,29 +333,29 @@ Design Statistics
 # IOs                              : 19
 
 Cell Usage :
-# BELS                             : 1370
+# BELS                             : 1443
 #      GND                         : 3
-#      INV                         : 62
-#      LUT1                        : 150
-#      LUT2                        : 170
-#      LUT2_L                      : 6
-#      LUT3                        : 166
+#      INV                         : 67
+#      LUT1                        : 158
+#      LUT2                        : 172
+#      LUT2_L                      : 7
+#      LUT3                        : 175
 #      LUT3_D                      : 1
-#      LUT3_L                      : 4
-#      LUT4                        : 123
-#      LUT4_D                      : 9
-#      LUT4_L                      : 14
-#      MUXCY                       : 427
-#      MUXF5                       : 24
+#      LUT3_L                      : 5
+#      LUT4                        : 130
+#      LUT4_D                      : 10
+#      LUT4_L                      : 15
+#      MUXCY                       : 448
+#      MUXF5                       : 25
 #      MUXF6                       : 10
 #      MUXF7                       : 5
 #      VCC                         : 3
-#      XORCY                       : 193
-# FlipFlops/Latches                : 306
+#      XORCY                       : 209
+# FlipFlops/Latches                : 323
 #      FD                          : 11
-#      FDE                         : 96
+#      FDE                         : 105
 #      FDR                         : 95
-#      FDRE                        : 60
+#      FDRE                        : 68
 #      FDRS                        : 14
 #      FDRSE                       : 4
 #      FDS                         : 16
@@ -362,10 +375,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      388  out of   4656     8%  
- Number of Slice Flip Flops:            306  out of   9312     3%  
- Number of 4 input LUTs:                706  out of   9312     7%  
-    Number used as logic:               705
+ Number of Slices:                      405  out of   4656     8%  
+ Number of Slice Flip Flops:            323  out of   9312     3%  
+ Number of 4 input LUTs:                741  out of   9312     7%  
+    Number used as logic:               740
     Number used as Shift registers:       1
  Number of IOs:                          19
  Number of bonded IOBs:                  19  out of    232     8%  
@@ -392,7 +405,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK_50MHz                          | BUFGP                  | 307   |
+CLK_50MHz                          | BUFGP                  | 324   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -403,9 +416,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 7.655ns (Maximum Frequency: 130.634MHz)
+   Minimum period: 7.806ns (Maximum Frequency: 128.113MHz)
    Minimum input arrival time before clock: 2.651ns
-   Maximum output required time after clock: 15.568ns
+   Maximum output required time after clock: 14.687ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -414,39 +427,39 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50MHz'
-  Clock period: 7.655ns (frequency: 130.634MHz)
-  Total number of paths / destination ports: 17513 / 635
+  Clock period: 7.806ns (frequency: 128.113MHz)
+  Total number of paths / destination ports: 23404 / 677
 -------------------------------------------------------------------------
-Delay:               7.655ns (Levels of Logic = 15)
-  Source:            XLXI_1/targetY_1 (FF)
-  Destination:       XLXI_1/targetX_11 (FF)
+Delay:               7.806ns (Levels of Logic = 15)
+  Source:            XLXI_1/targetX_1 (FF)
+  Destination:       XLXI_1/tempScore_7 (FF)
   Source Clock:      CLK_50MHz rising
   Destination Clock: CLK_50MHz rising
 
-  Data Path: XLXI_1/targetY_1 to XLXI_1/targetX_11
+  Data Path: XLXI_1/targetX_1 to XLXI_1/tempScore_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.514   0.603  XLXI_1/targetY_1 (XLXI_1/targetY_1)
-     LUT1:I0->O            1   0.612   0.000  XLXI_1/Madd_RGB_add0000_cy<1>_rt (XLXI_1/Madd_RGB_add0000_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  XLXI_1/Madd_RGB_add0000_cy<1> (XLXI_1/Madd_RGB_add0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<2> (XLXI_1/Madd_RGB_add0000_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<3> (XLXI_1/Madd_RGB_add0000_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<4> (XLXI_1/Madd_RGB_add0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<5> (XLXI_1/Madd_RGB_add0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<6> (XLXI_1/Madd_RGB_add0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<7> (XLXI_1/Madd_RGB_add0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<8> (XLXI_1/Madd_RGB_add0000_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<9> (XLXI_1/Madd_RGB_add0000_cy<9>)
-     MUXCY:CI->O           0   0.051   0.000  XLXI_1/Madd_RGB_add0000_cy<10> (XLXI_1/Madd_RGB_add0000_cy<10>)
-     XORCY:CI->O           2   0.699   0.449  XLXI_1/Madd_RGB_add0000_xor<11> (XLXI_1/RGB_add0000<11>)
-     LUT2:I1->O            1   0.612   0.000  XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11> (XLXI_1/Mcompar_targetX_cmp_ge0001_lut<11>)
-     MUXCY:S->O            1   0.752   0.387  XLXI_1/Mcompar_targetX_cmp_ge0001_cy<11> (XLXI_1/targetX_cmp_ge0001)
-     LUT4:I2->O           24   0.612   1.064  XLXI_1/targetX_not000156 (XLXI_1/targetX_not0001)
+     FDE:C->Q              3   0.514   0.603  XLXI_1/targetX_1 (XLXI_1/targetX_1)
+     LUT1:I0->O            1   0.612   0.000  XLXI_1/Madd_RGB_add0001_cy<1>_rt (XLXI_1/Madd_RGB_add0001_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  XLXI_1/Madd_RGB_add0001_cy<1> (XLXI_1/Madd_RGB_add0001_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<2> (XLXI_1/Madd_RGB_add0001_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<3> (XLXI_1/Madd_RGB_add0001_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<4> (XLXI_1/Madd_RGB_add0001_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<5> (XLXI_1/Madd_RGB_add0001_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<6> (XLXI_1/Madd_RGB_add0001_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<7> (XLXI_1/Madd_RGB_add0001_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<8> (XLXI_1/Madd_RGB_add0001_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<9> (XLXI_1/Madd_RGB_add0001_cy<9>)
+     MUXCY:CI->O           0   0.051   0.000  XLXI_1/Madd_RGB_add0001_cy<10> (XLXI_1/Madd_RGB_add0001_cy<10>)
+     XORCY:CI->O           2   0.699   0.449  XLXI_1/Madd_RGB_add0001_xor<11> (XLXI_1/RGB_add0001<11>)
+     LUT2:I1->O            1   0.612   0.000  XLXI_1/Mcompar_targetX_cmp_ge0000_lut<11> (XLXI_1/Mcompar_targetX_cmp_ge0000_lut<11>)
+     MUXCY:S->O            4   0.752   0.529  XLXI_1/Mcompar_targetX_cmp_ge0000_cy<11> (XLXI_1/targetX_cmp_ge0000)
+     LUT4:I2->O           32   0.612   1.073  XLXI_1/targetX_not00011 (XLXI_1/targetX_not0001)
      FDE:CE                    0.483          XLXI_1/targetY_0
     ----------------------------------------
-    Total                      7.655ns (5.151ns logic, 2.503ns route)
-                                       (67.3% logic, 32.7% route)
+    Total                      7.806ns (5.151ns logic, 2.654ns route)
+                                       (66.0% logic, 34.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50MHz'
@@ -470,14 +483,14 @@ Offset:              2.651ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50MHz'
-  Total number of paths / destination ports: 46748 / 16
+  Total number of paths / destination ports: 31452 / 16
 -------------------------------------------------------------------------
-Offset:              15.568ns (Levels of Logic = 30)
+Offset:              14.687ns (Levels of Logic = 30)
   Source:            XLXI_2/h_cnt_3 (FF)
-  Destination:       VGA_B (PAD)
+  Destination:       VGA_G (PAD)
   Source Clock:      CLK_50MHz rising
 
-  Data Path: XLXI_2/h_cnt_3 to VGA_B
+  Data Path: XLXI_2/h_cnt_3 to VGA_G
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -493,7 +506,7 @@ Offset:              15.568ns (Levels of Logic = 30)
      MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<8> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<8>)
      MUXCY:CI->O           1   0.052   0.000  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<9> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<9>)
      MUXCY:CI->O           1   0.399   0.509  XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<10> (XLXI_2/Mcompar_PIX_X_cmp_gt0000_cy<10>)
-     LUT4:I0->O           94   0.612   1.242  XLXI_2/PIX_X_and00001 (XLXI_2/PIX_X_and0000)
+     LUT4:I0->O           96   0.612   1.242  XLXI_2/PIX_X_and00001 (XLXI_2/PIX_X_and0000)
      LUT2:I0->O            4   0.612   0.568  XLXI_2/PIX_Y<0>1 (XLXN_71<0>)
      LUT2:I1->O            1   0.612   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_lut<0> (XLXI_1/Mcompar_RGB_cmp_gt0000_lut<0>)
      MUXCY:S->O            1   0.404   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<0> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<0>)
@@ -507,26 +520,26 @@ Offset:              15.568ns (Levels of Logic = 30)
      MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<8> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<8>)
      MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<9> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<9>)
      MUXCY:CI->O           1   0.051   0.000  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<10> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<10>)
-     MUXCY:CI->O           1   0.399   0.509  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<11> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<11>)
-     LUT4:I0->O            2   0.612   0.449  XLXI_1/RGB<1>11 (XLXI_1/N0)
-     LUT2:I1->O            2   0.612   0.532  XLXI_2/VGA_R_SW0 (N2)
-     LUT4:I0->O            1   0.612   0.357  XLXI_2/VGA_B (VGA_B_OBUF)
-     OBUF:I->O                 3.169          VGA_B_OBUF (VGA_B)
+     MUXCY:CI->O           2   0.399   0.532  XLXI_1/Mcompar_RGB_cmp_gt0000_cy<11> (XLXI_1/Mcompar_RGB_cmp_gt0000_cy<11>)
+     LUT4:I0->O            2   0.612   0.410  XLXI_1/RGB<1>21 (XLXI_1/N2)
+     LUT4:I2->O            1   0.612   0.000  XLXI_2/VGA_G331 (XLXI_2/VGA_G33)
+     MUXF5:I1->O           1   0.278   0.357  XLXI_2/VGA_G33_f5 (VGA_G_OBUF)
+     OBUF:I->O                 3.169          VGA_G_OBUF (VGA_G)
     ----------------------------------------
-    Total                     15.568ns (10.501ns logic, 5.067ns route)
-                                       (67.5% logic, 32.5% route)
+    Total                     14.687ns (10.167ns logic, 4.520ns route)
+                                       (69.2% logic, 30.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.52 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.89 secs
  
 --> 
 
-Total memory usage is 226672 kilobytes
+Total memory usage is 214844 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 
